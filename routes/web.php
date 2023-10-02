@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,7 @@ use App\Http\Controllers\DashboardController;
 // });
 
 Route::get('/',[DashboardController::class, 'index']);
+
+Route::post('/import', [ExcelCSVController::class, 'importExcelCSV']);
+
+Route::resource('/subcategories', SubCategoryController::class);

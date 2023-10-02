@@ -6,6 +6,7 @@ use App\Models\Color;
 use App\Models\Gender;
 use App\Models\Season;
 use App\Models\Category;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -16,6 +17,7 @@ class DashboardController extends Controller
         $categories = Category::all();
         $colors = Color::all();
         $seasons = Season::all();
-        return view('admin.dashboard', compact('genders', 'categories', 'colors', 'seasons'));
+        $subcategories = SubCategory::all();
+        return view('admin.dashboard', compact('genders', 'categories', 'colors', 'seasons', 'subcategories'));
     }
 }

@@ -16,6 +16,36 @@
             <div class="col-4 col-lg-4">
                 <div class="card">
                     <div class="card-header">
+                    <h4>List of Season</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="buttons text-right">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#addData"><i class="fas fa-solid fa-plus"></i> Add Data</button>
+                        </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-md">
+                        <tr>
+                            <th>#</th>
+                            <th>Action</th>
+                        </tr>
+                        @foreach ($seasons as $s)
+                        <tr>
+                            <td>#</td>
+                            <td>{{ $s->name }}</td>
+                        </tr>
+                        @endforeach
+                        </table>
+                    </div>
+                    </div>
+                    <div class="card-footer text-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-lg-4">
+                <div class="card">
+                    <div class="card-header">
                     <h4>List of Gender</h4>
                     </div>
                     <div class="card-body">

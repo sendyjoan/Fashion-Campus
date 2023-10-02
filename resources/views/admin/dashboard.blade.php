@@ -56,10 +56,12 @@
                             <th>#</th>
                             <th>Action</th>
                         </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
+                        @foreach ($categories as $c)
+                        <tr>
+                            <td>#</td>
+                            <td>{{ $c->name }}</td>
+                        </tr>
+                        @endforeach
                         </table>
                     </div>
                     </div>

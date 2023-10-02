@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
+use App\Imports\SubCategoryImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SubCategoryController extends Controller
 {
@@ -28,7 +30,12 @@ class SubCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'file' => 'required',
+        ]);
+        Excel::import(new SubCategoryImport, $request->file('file'));
+        return redirect('/')->with('status', 'The file has been excel/csv imported to database in Laravel 10');
+
     }
 
     /**

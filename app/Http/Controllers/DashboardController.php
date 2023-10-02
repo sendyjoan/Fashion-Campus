@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Color;
 use App\Models\Gender;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ class DashboardController extends Controller
     {
         $genders = Gender::all();
         $categories = Category::all();
-        return view('admin.dashboard', compact('genders', 'categories'));
+        $colors = Color::all();
+        return view('admin.dashboard', compact('genders', 'categories', 'colors'));
     }
 }

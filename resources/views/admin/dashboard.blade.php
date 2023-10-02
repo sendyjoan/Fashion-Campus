@@ -85,10 +85,12 @@
                             <th>#</th>
                             <th>Action</th>
                         </tr>
-                            <tr>
-                                <td>#</td>
-                                <td>#</td>
-                            </tr>
+                        @foreach ($colors as $co)
+                        <tr>
+                            <td>#</td>
+                            <td>{{ $co->name }}</td>
+                        </tr>
+                        @endforeach
                         </table>
                     </div>
                     </div>

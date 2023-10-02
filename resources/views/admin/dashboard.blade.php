@@ -73,7 +73,7 @@
             <div class="col-4 col-lg-4">
                 <div class="card">
                     <div class="card-header">
-                    <h4>List of Product</h4>
+                    <h4>List of Colors</h4>
                     </div>
                     <div class="card-body">
                         <div class="buttons text-right">
